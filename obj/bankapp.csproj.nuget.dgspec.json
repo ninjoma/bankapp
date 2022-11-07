@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/ninjam/Documentos/proyectos/dotnet/bankapp/bankapp.csproj": {}
+    "C:\\Users\\juanj\\Documents\\proyectos\\bankapp\\bankapp.csproj": {}
   },
   "projects": {
-    "/home/ninjam/Documentos/proyectos/dotnet/bankapp/bankapp.csproj": {
+    "C:\\Users\\juanj\\Documents\\proyectos\\bankapp\\bankapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ninjam/Documentos/proyectos/dotnet/bankapp/bankapp.csproj",
+        "projectUniqueName": "C:\\Users\\juanj\\Documents\\proyectos\\bankapp\\bankapp.csproj",
         "projectName": "bankapp",
-        "projectPath": "/home/ninjam/Documentos/proyectos/dotnet/bankapp/bankapp.csproj",
-        "packagesPath": "/home/ninjam/.nuget/packages/",
-        "outputPath": "/home/ninjam/Documentos/proyectos/dotnet/bankapp/obj/",
+        "projectPath": "C:\\Users\\juanj\\Documents\\proyectos\\bankapp\\bankapp.csproj",
+        "packagesPath": "C:\\Users\\juanj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\juanj\\Documents\\proyectos\\bankapp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/ninjam/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\juanj\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -53,7 +53,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -62,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -13,6 +13,7 @@ namespace bankapp {
         private void InitializeComponent() {
             
             // Window Settings
+
             this.Width = Dim.Fill(0);
             this.Height = Dim.Fill(0);
             this.X = 0;
@@ -24,6 +25,8 @@ namespace bankapp {
             this.Border.DrawMarginFrame = true;
             this.TextAlignment = Terminal.Gui.TextAlignment.Left;
             this.Title = "StealGreens Bank SSL - Menu";
+
+            // Component Declarations
 
             this.depositButton = new Terminal.Gui.Button();
             this.withdrawButton = new Terminal.Gui.Button();
@@ -56,7 +59,7 @@ namespace bankapp {
             this.balanceLabel.Width = 24;
             this.balanceLabel.X = 0 + margin;
             this.balanceLabel.Y = Pos.Center() - 8;
-            this.balanceLabel.Text = "Current Balance: $NaN";
+            this.balanceLabel.Text = $"Hello, { BankAccount.selected.Username }. Current Balance: ${ BankAccount.selected.Balance }";
 
             this.Add(
                 depositButton,

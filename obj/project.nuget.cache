@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ifXJ4SnDMgl7hfG/aKBg0GixPIvXsYQfNVZEVADWQdI2as9GxaPBYpyIbPDWXnKuud6TsOcJ93ZbN7JR1eYR0g==",
+  "dgSpecHash": "H/yz+IvoxoOOg4rOocaSdYQN/1zk53XnV9YsjAS7Bjo9sXd3LiLXTsbRFCYBwn4hdhlr0GHfWA36R45aqPXpKg==",
   "success": true,
-  "projectFilePath": "/home/ninjam/Documentos/proyectos/dotnet/bankapp/bankapp.csproj",
+  "projectFilePath": "C:\\Users\\juanj\\Documents\\proyectos\\bankapp\\bankapp.csproj",
   "expectedPackageFiles": [
-    "/home/ninjam/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
-    "/home/ninjam/.nuget/packages/nstack.core/1.0.3/nstack.core.1.0.3.nupkg.sha512",
-    "/home/ninjam/.nuget/packages/system.valuetuple/4.5.0/system.valuetuple.4.5.0.nupkg.sha512",
-    "/home/ninjam/.nuget/packages/terminal.gui/1.8.2/terminal.gui.1.8.2.nupkg.sha512"
+    "C:\\Users\\juanj\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\juanj\\.nuget\\packages\\nstack.core\\1.0.3\\nstack.core.1.0.3.nupkg.sha512",
+    "C:\\Users\\juanj\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\juanj\\.nuget\\packages\\terminal.gui\\1.8.2\\terminal.gui.1.8.2.nupkg.sha512"
   ],
   "logs": []
 }

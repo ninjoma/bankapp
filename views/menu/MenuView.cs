@@ -6,8 +6,11 @@ namespace bankapp{
         
         public MenuView() {
             InitializeComponent();
-            Console.Write(JsonConvert.SerializeObject(BankAccount.selected));
+            transButton.Clicked += () => transProcess();
         }
 
+        private void transProcess(){
+            Application.Top.Add(new TransactionsView());
+        }
     }
 }

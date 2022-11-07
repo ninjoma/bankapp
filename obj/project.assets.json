@@ -5,10 +5,14 @@
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "NStack.Core/1.0.3": {
@@ -38,10 +42,14 @@
           "NStack.Core": "1.0.3"
         },
         "compile": {
-          "lib/net6.0/Terminal.Gui.dll": {}
+          "lib/net6.0/Terminal.Gui.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/Terminal.Gui.dll": {}
+          "lib/net6.0/Terminal.Gui.dll": {
+            "related": ".xml"
+          }
         },
         "resource": {
           "lib/net6.0/fr-FR/Terminal.Gui.resources.dll": {
@@ -179,19 +187,19 @@
     ]
   },
   "packageFolders": {
-    "/home/ninjam/.nuget/packages/": {}
+    "C:\\Users\\juanj\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ninjam/Documentos/proyectos/dotnet/bankapp/bankapp.csproj",
+      "projectUniqueName": "C:\\Users\\juanj\\Documents\\proyectos\\bankapp\\bankapp.csproj",
       "projectName": "bankapp",
-      "projectPath": "/home/ninjam/Documentos/proyectos/dotnet/bankapp/bankapp.csproj",
-      "packagesPath": "/home/ninjam/.nuget/packages/",
-      "outputPath": "/home/ninjam/Documentos/proyectos/dotnet/bankapp/obj/",
+      "projectPath": "C:\\Users\\juanj\\Documents\\proyectos\\bankapp\\bankapp.csproj",
+      "packagesPath": "C:\\Users\\juanj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\juanj\\Documents\\proyectos\\bankapp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ninjam/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\juanj\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -230,7 +238,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -239,7 +248,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

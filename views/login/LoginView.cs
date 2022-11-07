@@ -5,17 +5,13 @@ namespace bankapp{
         
         public LoginView() {
             InitializeComponent();
-            loginButton.Clicked += () => {
-                loginProcess();
-            };
-            createAccountButton.Clicked += () => {
-                createAccountProcess();
-            };
+            loginButton.Clicked += () => loginProcess();
+            createAccountButton.Clicked += () => createAccountProcess();
         }
 
         private void loginProcess(){
             try {
-                BankAccount.LoginAccount(Convert.ToString(usernameField.Text), Convert.ToString(passwordField.Text));
+                BankAccount.LoginAccount(Convert.ToString(usernameField.Text) ?? "", Convert.ToString(passwordField.Text) ?? "");
                 Application.Top.Add(new MenuView());
                 Application.Top.Remove(this);
             } catch(Exception e) {
@@ -26,7 +22,7 @@ namespace bankapp{
 
         private void createAccountProcess(){
             try {
-                BankAccount.CreateAccount(Convert.ToString(usernameField.Text), Convert.ToString(passwordField.Text));
+                BankAccount.CreateAccount(Convert.ToString(usernameField.Text) ?? "", Convert.ToString(passwordField.Text) ?? "");
                 Application.Top.Add(new MenuView());
                 Application.Top.Remove(this);
             } catch(Exception e){

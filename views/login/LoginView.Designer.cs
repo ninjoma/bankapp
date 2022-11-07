@@ -28,6 +28,7 @@ namespace bankapp {
         private void InitializeComponent() {
 
             // Window Settings
+            
             this.Width = Dim.Fill(0);
             this.Height = Dim.Fill(0);
             this.X = 0;

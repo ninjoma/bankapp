@@ -1,8 +1,9 @@
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 static class FileDB {
     
-    static public dynamic data;
+    static public dynamic? data;
 
     static public void Init(){
         try {
@@ -10,14 +11,9 @@ static class FileDB {
                 File.Create("data.json");
             }
         } catch (Exception ex){
-            
+            Console.Write(ex.Message);
         }
-        data = JsonConvert.DeserializeObject(File.ReadAllText("data.json"));
-    }
-
-    static public void Update(string key, Object value){
-        data[key] = JsonConvert.SerializeObject(value);
-        Console.Write(data[key]);
+        data = JsonConvert.DeserializeObject(File.ReadAllText("data.json"))!;
     }
 
     static public void Save(){
