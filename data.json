@@ -1,1 +1,95 @@
-{"settings":{"lastTransactionId":"0"},"users":{"helloyes":{"password":"123123","transactions":[{"senderID":"admin","receiverID":"helloyes","Amount":"1000"},{"senderID":"admin","receiverID":"helloyes","Amount":"1000"},{"senderID":"admin","receiverID":"helloyes","Amount":"1000"}]},"hellono":{"password":"123123","transactions":null},"right":{"password":"11111","transactions":[]},"123":{"password":"123","transactions":[{"senderID":"DEPOSIT","receiverID":"123","Amount":3000.0}]},"123123":{"password":"123123","transactions":[{"senderID":"DEPOSIT","receiverID":"123123","Amount":1000.0}]},"sergio":{"password":"123123","transactions":[{"senderID":"DEPOSIT","receiverID":"sergio","Amount":1000.0},{"senderID":"sergio","receiverID":"WITHDRAW","Amount":-123.0},{"senderID":"sergio","receiverID":"WITHDRAW","Amount":-123.0},{"senderID":"sergio","receiverID":"WITHDRAW","Amount":-123.0},{"senderID":"sergio","receiverID":"WITHDRAW","Amount":-123.0},{"senderID":"DEPOSIT","receiverID":"sergio","Amount":1000.0},{"senderID":"sergio","receiverID":"WITHDRAW","Amount":-100.0}]}}}
+{
+    "settings": {
+        "lastTransactionId": "0"
+    },
+    "users": {
+        "helloyes": {
+            "password": "123123",
+            "transactions": [
+                {
+                    "senderID": "admin",
+                    "receiverID": "helloyes",
+                    "Amount": "1000"
+                },
+                {
+                    "senderID": "admin",
+                    "receiverID": "helloyes",
+                    "Amount": "1000"
+                },
+                {
+                    "senderID": "admin",
+                    "receiverID": "helloyes",
+                    "Amount": "1000"
+                }
+            ]
+        },
+        "hellono": {
+            "password": "123123",
+            "transactions": null
+        },
+        "right": {
+            "password": "11111",
+            "transactions": []
+        },
+        "123": {
+            "password": "123",
+            "transactions": [
+                {
+                    "senderID": "DEPOSIT",
+                    "receiverID": "123",
+                    "Amount": 3000.0
+                }
+            ]
+        },
+        "123123": {
+            "password": "123123",
+            "transactions": [
+                {
+                    "senderID": "DEPOSIT",
+                    "receiverID": "123123",
+                    "Amount": 1000.0
+                }
+            ]
+        },
+        "sergio": {
+            "password": "123123",
+            "transactions": [
+                {
+                    "senderID": "DEPOSIT",
+                    "receiverID": "sergio",
+                    "Amount": 1000.0
+                },
+                {
+                    "senderID": "sergio",
+                    "receiverID": "WITHDRAW",
+                    "Amount": -123.0
+                },
+                {
+                    "senderID": "sergio",
+                    "receiverID": "WITHDRAW",
+                    "Amount": -123.0
+                },
+                {
+                    "senderID": "sergio",
+                    "receiverID": "WITHDRAW",
+                    "Amount": -123.0
+                },
+                {
+                    "senderID": "sergio",
+                    "receiverID": "WITHDRAW",
+                    "Amount": -123.0
+                },
+                {
+                    "senderID": "DEPOSIT",
+                    "receiverID": "sergio",
+                    "Amount": 1000.0
+                },
+                {
+                    "senderID": "sergio",
+                    "receiverID": "WITHDRAW",
+                    "Amount": -100.0
+                }
+            ]
+        }
+    }
+}
