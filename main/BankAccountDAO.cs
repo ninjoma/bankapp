@@ -10,22 +10,20 @@ public static class BankAccountDAO {
         return (FileDB.data?["users"][username].password == password) ? true : false;
     }
 
-    public static Transaction[] LoadTransactions(string username){
+    public static List<Transaction> LoadTransactions(string username){
         var currentUser = FileDB.data?["users"][username];
         if(currentUser?.transactions == null){
             throw new Exception();
         }
         JArray listOfTransactions = JArray.FromObject(currentUser?.transactions);
         int length = listOfTransactions.Count();
-        Transaction[] loadedTransactions = new Transaction[length];
-        int i = 0;
+        List<Transaction> loadedTransactions = new List<Transaction>();
         foreach(JObject item in listOfTransactions){
-            loadedTransactions[i] = new Transaction(
+            loadedTransactions.Add(new Transaction(
                 item.GetValue("senderID")?.ToString() ?? "NOT FOUND",
                 item.GetValue("receiverID")?.ToString() ?? "NOT FOUND",
                 Double.Parse(item.GetValue("Amount")?.ToString() ?? "ERROR")
-            );
-            i++;    
+            ));    
         }
         return loadedTransactions;
     }

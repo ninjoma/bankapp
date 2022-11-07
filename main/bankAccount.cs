@@ -5,17 +5,38 @@ public class BankAccount {
     private string Password;
 
     public static BankAccount? selected;
-    private Transaction[] transactions;
+    private List<Transaction> transactions = new List<Transaction>();
 
-    public BankAccount(string username, string password, Transaction[] transactions = null!){
+    public BankAccount(string username, string password, List<Transaction> transactions = null){
         this.Username = username;
         this.Password = password;
-        this.transactions = transactions ?? new Transaction[50];
+        this.transactions = transactions ?? new List<Transaction>();
     }
 
     // Transactions Based Methods
-    private double CalculateBalance() {
-        return 0.0; // TO DO.
+    public double CalculateBalance() {
+        double total = 0;
+        transactions.ForEach(item => {
+            total = total + item.GetAmount();
+        });
+        return total; // TO IMPROVE.
+    }
+
+    public int GetTransactionCount(){
+        return transactions.Count();
+    }
+
+    public void CreateTransaction(double amount){
+        if(selected != null){
+            Transaction tr;
+            if(amount > 0){
+                tr = new Transaction("DEPOSIT", selected.Username, amount);
+            } else {
+                tr = new Transaction(selected.Username, "WITHDRAW",amount);
+            }
+            selected.transactions.Add(tr);
+        }
+        UpdateData();
     }
 
 
@@ -40,20 +61,20 @@ public class BankAccount {
         selected = new BankAccount(username, password);
         UpdateData();
     }
-    
+
     private static void UpdateData(){
 
         // Data to Save
         dynamic dataToSave = new {
-            password = selected!.Password,
-            transactions = selected.transactions,
+            password = selected?.Password,
+            transactions = selected?.transactions.ToArray().Select(item => item.Save()),
         };
 
         // Update Json DB
-        BankAccountDAO.SaveAccount(selected.Username, dataToSave);
+        BankAccountDAO.SaveAccount(selected?.Username, dataToSave);
     }
 
-    public Transaction[] GetTransactions() {
+    public List<Transaction> GetTransactions() {
         return transactions;
     }
 }

@@ -21,4 +21,8 @@ public class Transaction {
             Amount = this.Amount,
         };
     }
+
+    public double GetAmount(){
+        return Amount;
+    }
 }

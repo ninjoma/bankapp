@@ -59,8 +59,8 @@ namespace bankapp {
             this.balanceLabel.Width = 24;
             this.balanceLabel.X = 0 + margin;
             this.balanceLabel.Y = Pos.Center() - 8;
-            this.balanceLabel.Text = $"Hello, { BankAccount.selected.Username }. Current Balance: ${ BankAccount.selected.Balance }";
-
+            this.balanceLabel.Text = $"Hello, { BankAccount.selected.Username }. Current Balance: ${ BankAccount.selected.CalculateBalance() }";
+            Console.Write(BankAccount.selected.CalculateBalance());
             this.Add(
                 depositButton,
                 withdrawButton,

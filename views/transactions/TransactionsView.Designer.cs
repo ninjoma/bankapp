@@ -6,6 +6,7 @@ namespace bankapp {
 
         private Terminal.Gui.Label listLabel;
         private Terminal.Gui.ListView transListView;
+        private Terminal.Gui.Button backButton;
         
         private void InitializeComponent(){
 
@@ -26,13 +27,18 @@ namespace bankapp {
 
             listLabel = new Terminal.Gui.Label();
             transListView = new Terminal.Gui.ListView();
-            
+            backButton = new Terminal.Gui.Button();
+
+            backButton.Width = 9;
+            backButton.Text = "<- Back";
+            backButton.X = 0;
+            backButton.Y = 2;
 
             listLabel.Width = 24;
             listLabel.Height = 1;
-            listLabel.X = 10;
+            listLabel.X = 12;
             listLabel.Y = 2;
-            listLabel.Text = "Total Transactions: NaN"; // To Do
+            listLabel.Text = $"Total Transactions: { BankAccount.selected.GetTransactionCount() }"; // To Do
 
             transListView.Width = Dim.Fill(0);
             transListView.Height = Dim.Fill(6);
@@ -42,7 +48,8 @@ namespace bankapp {
 
             this.Add(
                 listLabel,
-                transListView
+                transListView,
+                backButton
             );
 
         }
