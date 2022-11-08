@@ -3,15 +3,15 @@ using Newtonsoft.Json.Linq;
 
 public static class BankAccountDAO {
     public static bool DoesUsernameExist(string username) {
-        return (FileDB.data?["users"][username] == null) ? false : true;
+        return (FileDB.GetUser(username) == null) ? false : true;
     }
 
     public static bool DoesPasswordMatch(string username, string password){
-        return (FileDB.data?["users"][username].password == password) ? true : false;
+        return (FileDB.GetUser(username).password == password) ? true : false;
     }
 
     public static List<Transaction> LoadTransactions(string username){
-        var currentUser = FileDB.data?["users"][username];
+        var currentUser = FileDB.GetUser(username);
         if(currentUser?.transactions == null){
             throw new Exception();
         }
@@ -30,7 +30,7 @@ public static class BankAccountDAO {
 
 
     public static void SaveAccount(string username, dynamic dataToSave){
-        FileDB.data!["users"][username] =  JObject.FromObject(dataToSave);
+        FileDB.SetUser(username, JObject.FromObject(dataToSave));
     }
     
     

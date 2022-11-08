@@ -3,6 +3,7 @@ public class BankAccount {
     public double Balance { get; } = 0.0;
 
     private string Password;
+    private int minimumThreshold = -1000;
 
     public static BankAccount? selected;
     private List<Transaction> transactions = new List<Transaction>();
@@ -19,7 +20,7 @@ public class BankAccount {
         transactions.ForEach(item => {
             total = total + item.GetAmount();
         });
-        return total; // TO IMPROVE.
+        return total;
     }
 
     public int GetTransactionCount(){
@@ -27,16 +28,16 @@ public class BankAccount {
     }
 
     public void CreateTransaction(double amount){
-        if(selected != null){
+        if(selected != null && amount != null && selected?.CalculateBalance() + amount > minimumThreshold){
             Transaction tr;
             if(amount > 0){
-                tr = new Transaction("DEPOSIT", selected.Username, amount);
+                tr = new Transaction("DEPOSIT", selected!.Username, amount);
             } else {
-                tr = new Transaction(selected.Username, "WITHDRAW",amount);
+                tr = new Transaction(selected!.Username, "WITHDRAW", amount);
             }
             selected.transactions.Add(tr);
+            UpdateData();
         }
-        UpdateData();
     }
 
 
