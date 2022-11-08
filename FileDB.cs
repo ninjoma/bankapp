@@ -5,15 +5,22 @@ static class FileDB {
     
     static private dynamic? data;
 
+    static private dynamic originalDataStructure = new {
+        users = new {}
+    };
+
     static public void Init(){
         try {
-            if(File.Exists("./data.json") == false){
-                File.Create("./data.json");
+            if(File.Exists("data.json") == false){
+                File.Create("data.json").Dispose();
+                data = originalDataStructure;
+                Save();
             }
         } catch (Exception ex){
             Console.Write(ex.Message);
+        } finally {
+            data = JsonConvert.DeserializeObject(File.ReadAllText("data.json"));
         }
-        data = JsonConvert.DeserializeObject(File.ReadAllText("./data.json"))!;
     }
 
     static public void Save(){
