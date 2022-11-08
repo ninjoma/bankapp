@@ -6,7 +6,8 @@ COPY . ./
 RUN dotnet publish -c Release -o out
     
 # Build runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
+FROM dotnet-jammy-modified
 WORKDIR /app
+ENV TERM=linux
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "bankapp.dll"]
