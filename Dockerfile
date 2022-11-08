@@ -8,6 +8,6 @@ RUN dotnet publish -c Release -o out
 # Build runtime image
 FROM dotnet-jammy-modified
 WORKDIR /app
-ENV TERM=linux
+ENV TERM=XTERM
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "bankapp.dll"]
