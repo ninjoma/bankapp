@@ -3,6 +3,7 @@ using Terminal.Gui;
 
 FileDB.Init();
 Application.Init();
+Application.UseSystemConsole = true;
 try
 {
     Toplevel Top = Application.Top;
